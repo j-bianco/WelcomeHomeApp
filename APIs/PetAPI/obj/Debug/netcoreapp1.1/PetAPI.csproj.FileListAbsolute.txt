@@ -6,3 +6,11 @@ C:\Users\User\Desktop\RWCA\z_ Phase 2 Project\APIs\PetAPI\bin\Debug\netcoreapp1.
 C:\Users\User\Desktop\RWCA\z_ Phase 2 Project\APIs\PetAPI\bin\Debug\netcoreapp1.1\PetAPI.pdb
 C:\Users\User\Desktop\RWCA\z_ Phase 2 Project\APIs\PetAPI\obj\Debug\netcoreapp1.1\PetAPI.dll
 C:\Users\User\Desktop\RWCA\z_ Phase 2 Project\APIs\PetAPI\obj\Debug\netcoreapp1.1\PetAPI.pdb
+C:\Users\User\Desktop\Team_JAR\APIs\PetAPI\bin\Debug\netcoreapp1.1\PetAPI.deps.json
+C:\Users\User\Desktop\Team_JAR\APIs\PetAPI\bin\Debug\netcoreapp1.1\PetAPI.runtimeconfig.json
+C:\Users\User\Desktop\Team_JAR\APIs\PetAPI\bin\Debug\netcoreapp1.1\PetAPI.runtimeconfig.dev.json
+C:\Users\User\Desktop\Team_JAR\APIs\PetAPI\bin\Debug\netcoreapp1.1\PetAPI.dll
+C:\Users\User\Desktop\Team_JAR\APIs\PetAPI\bin\Debug\netcoreapp1.1\PetAPI.pdb
+C:\Users\User\Desktop\Team_JAR\APIs\PetAPI\obj\Debug\netcoreapp1.1\PetAPI.AssemblyInfo.cs
+C:\Users\User\Desktop\Team_JAR\APIs\PetAPI\obj\Debug\netcoreapp1.1\PetAPI.dll
+C:\Users\User\Desktop\Team_JAR\APIs\PetAPI\obj\Debug\netcoreapp1.1\PetAPI.pdb

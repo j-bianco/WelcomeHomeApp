@@ -1,5 +1,6 @@
-angular
-  .module("petApp")
-  .service("animalService", function($http) {
-  
-})
+app.service("animalService", function($http){
+    this.getAnimals = function(){
+      return $http.get("http://localhost:5000/api/Animal/")
+    }
+
+  });
