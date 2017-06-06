@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="petApp">
 
 <head>
   <meta charset="UTF-8">
@@ -17,20 +17,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
 </head>
 
-<body>
-<div class="petNav">
-<ul class="petNavItems">
-<li><a ui-sref="home">Home</a></li>
-<li><a ui-sref="user">Login</a></li>
-<li><a ui-sref="animal">Animal</a></li>
-<li><a ui-sref="map">Map</a></li>
-<li><a ui-sref="lost">Lost</a></li>
-<li><a ui-sref="found">Found</a></li>
-<li><a ui-sref="success">Success Stories</a></li>
-</ul>
+<body ng-controller="homeController">
+  <div class="petNav">
+    <ul class="petNavItems">
+      <li><a ui-sref="home">Home</a></li>
+      <li><a ui-sref="user">Login</a></li>
+      <li><a ui-sref="animal">Animals</a></li>
+      <li><a ui-sref="map">Map</a></li>
+      <li><a ui-sref="lost">Lost</a></li>
+      <li><a ui-sref="found">Found</a></li>
+      <li><a ui-sref="success">Success Stories</a></li>
+    </ul>
 
 
-</div>
+  </div>
 
   <div ui-view></div>
 
@@ -44,8 +44,8 @@
   <script type="text/javascript" src="./controllers/indexController.js"></script>
   <script type="text/javascript" src="./controllers/lostController.js"></script>
   <script type="text/javascript" src="./controllers/foundController.js"></script>
-  
-  
+
+
   <!--Services-->
   <script type="text/javascript" src="./services/userService.js"></script>
   <script type="text/javascript" src="./services/animalService.js"></script>

@@ -1,10 +1,10 @@
 var app = angular.module("petApp", ["ui.router"])
 
-app.config(function ($stateprovider, $urlRouterProvider) {
+app.config(function ($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise("/");
 
-  $stateprovider
+  $stateProvider
     .state("home", {
       url: "/",
       templateUrl: "./views/home.html",
