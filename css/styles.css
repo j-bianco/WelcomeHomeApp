@@ -24,6 +24,10 @@ body {
   padding: 0 20px;
   font-weight: bold;
   font-size: 20px;
+  display: inline;
+ }
+ .petNavItems li {
+   display:inline;
  }
 
 .subHeader {
@@ -31,7 +35,9 @@ body {
 }
 
  .homeBody {
-   /*background-image:url("https://www.bls.gov/opub/btn/volume-2/images/2-16-image.jpg");*/
+   /*background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVcrrQnjVVFZwQ3FTAruevW_y1CnXwGCKgDjty2_dwkwnWsoutIQ");
+   background-repeat: no-repeat;
+   background-size: contain;*/
  } 
   .homeSuccess {
 padding: 5px;
