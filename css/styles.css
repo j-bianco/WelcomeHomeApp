@@ -11,7 +11,7 @@ body {
 .hero {
   font-size: 65 px;
   text-align: center;
-  margin: 40px;
+  margin: 0,40px;
 }
 
 .petNav {
@@ -29,4 +29,19 @@ body {
 .subHeader {
   text-align: center;
 }
-  
+
+ .homeBody {
+   /*background-image:url("https://www.bls.gov/opub/btn/volume-2/images/2-16-image.jpg");*/
+ } 
+  .homeSuccess {
+padding: 5px;
+margin: 5px;
+  }
+
+   .success1, .success2 {
+padding:8px;
+  }
+
+  .successBody {
+padding: 5px;
+  }
