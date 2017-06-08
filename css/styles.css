@@ -33,6 +33,10 @@ body {
 .subHeader {
   text-align: center;
 }
+  
+.angular-google-map-container { 
+  height: 400px;
+}
 
  .homeBody {
    /*background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVcrrQnjVVFZwQ3FTAruevW_y1CnXwGCKgDjty2_dwkwnWsoutIQ");
