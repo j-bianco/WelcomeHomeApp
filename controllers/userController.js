@@ -5,35 +5,46 @@ var _username;
 var _password1;
 var _password2;
 $scope.Users = [];
+var tempId = 0;
+var i = 0;
 
 userService.getUser().then(function(response){
   $scope.Users = response.data;
 })
 
 $scope.UserSubmit = function(){
-  _username = $scope.username
-
-  // left off here____________________________
-  for(i = 0; i < $scope.Users.Count; i++){
-    if(Users[i].Username = _username){
-      console.log("Username Taken!")
-    }
-    else{
-      console.log("Username Open!")
-    }
-  }
-// here_________________________________________
-  _password1 = $scope.password1
-  _password2 = $scope.password2
+  _username = $scope.username;
+  _password1 = $scope.password1;
+  _password2 = $scope.password2;;
+  check = "";
   if(_password1 != _password2){
     console.log("Passwords don't match")
-  }
-  else{
-  console.log(_username)
-  console.log(_password1)
-  console.log(_password2)
-  
-  }
-}
-  
+  };
+  $scope.Users.forEach(function(user) {
+    if(_username == user.username){
+      console.log("Username taken")
+      i++;
+    }
+    if(_username != user.username){
+      console.log("Username doesnt match.")
+      tempId = user.id;
+    }
+    
+  }, this);
+  if(i <= 0){
+    console.log(_username)
+    console.log(_password1)
+    console.log(_password2)
+    var user = {};
+    user.username = _username;
+    user.password = _password2;
+    user.id = tempId + 1;
+    userService.addUser(user);
+    userService.getUser().then(function(response){
+  $scope.Users = response.data;
 })
+    }
+    i = 0;
+};
+    
+});
