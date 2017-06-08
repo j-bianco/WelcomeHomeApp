@@ -7,9 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google-signin-client_id" content="542496520457-rhh67anehlaf8n3ttch2ne5ts5c5h5f9.apps.googleusercontent.com">
   <title>Pet App</title>
+  <!--JQuery CDN 3.2.1-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
   <!--CSS Bootstrap CDN 3.3.7-->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+  </script>
   <!--JS Bootstrap CDN 3.3.7-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
@@ -21,33 +25,41 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
   <!--Google API-->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Patrick+Hand+SC" rel="stylesheet">
 </head>
-
 <body ng-controller="homeController">
-  <div class="petNav">
-    <ul class="petNavItems">
-      <li><a ui-sref="home">Home</a></li>
-      <li><a ui-sref="user">Login</a></li>
-      <li><a ui-sref="animal">Animals</a></li>
-      <li><a ui-sref="map">Map</a></li>
-      <li><a ui-sref="lost">Lost</a></li>
-      <li><a ui-sref="found">Found</a></li>
-      <li><a ui-sref="success">News</a></li>
-    </ul>
-
-  </div>
-
+  <header role="banner" class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      </div>
+      <div class="navbar-inverse side-collapse in">
+        <nav role="navigation" class="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="user">Login</a></li>
+            <li><a ui-sref="map">Map</a></li>
+            <li><a ui-sref="lost">Lost</a></li>
+            <li><a ui-sref="found">Found</a></li>
+            <li><a ui-sref="success">News</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
   <div ui-view></div>
 
-
   <!--Module-->
   <script type="text/javascript" src="./app.js"></script>
+  <!--Navbar JS-->
+  <script type="text/javascript" src="./main.js"></script>
   <!--Controllers-->
   <script type="text/javascript" src="./controllers/userController.js"></script>
   <script type="text/javascript" src="./controllers/animalController.js"></script>
   <script type="text/javascript" src="./controllers/mapController.js"></script>
-  <script type="text/javascript" src="./controllers/indexController.js"></script>
+  <script type="text/javascript" src="./controllers/homeController.js"></script>
   <script type="text/javascript" src="./controllers/lostController.js"></script>
   <script type="text/javascript" src="./controllers/foundController.js"></script>
   <script type="text/javascript" src="./controllers/successController.js"></script>

@@ -1,10 +1,14 @@
-  <h1 class="hero">Here are our animals...</h1>
+<div class="container">
+  <div class="row moveDown">
 
-  <div ng-controller="animalController" ng-cloak>
-    <ul ng-repeat="animal in animals">
-      <li>{{ animal.name }}</li>
-      <li>{{ animal.type }}</li>
-      <li>{{ animal.breed }}</li>
-    </ul>
+    <h1 class="hero">Here are our animals...</h1>
+
+    <div ng-controller="animalController" ng-cloak>
+      <ul ng-repeat="animal in animals">
+        <li>{{ animal.name }}</li>
+        <li>{{ animal.type }}</li>
+        <li>{{ animal.breed }}</li>
+      </ul>
+    </div>
   </div>
-
+</div>

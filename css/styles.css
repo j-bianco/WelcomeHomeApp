@@ -3,51 +3,83 @@
 }
 
 body {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  font-family: 'Open Sans', 'sans-serif';
-}
+  font-family: 'Patrick Hand SC', cursive; 
+  }
 
 .hero {
   font-size: 65 px;
   text-align: center;
   margin: 0,40px;
-}
+} 
 
-.petNav {
-    background-color: darkred;
-    padding-top: 10px;
-  }
+/*pre {
+  tab-size: 8;
+      }*/
 
-.petNavItems a {
+.side-collapse-container {
+  width:100%;
+  position:relative;
+  left:0;
+  transition:left .4s;
+          }
+
+.side-collapse-container.out {
+  left:200px;
+          }
+
+.side-collapse {
+  top:50px;
+  bottom:0;
+  left:0;
+  width:200px;
+  position:fixed;
+  overflow:hidden;
+  transition:width .4s;
+          }
+          
+.side-collapse.in {
+  width:0;
+          }
+
+.navbar {
   color: white;
-  padding: 0 20px;
-  font-weight: bold;
-  font-size: 20px;
-  display: inline;
- }
- .petNavItems li {
-   display:inline;
+ 
  }
 
 .subHeader {
   text-align: center;
 }
 
- .homeBody {
-   /*background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVcrrQnjVVFZwQ3FTAruevW_y1CnXwGCKgDjty2_dwkwnWsoutIQ");
+ /*.homeBackground {
+   background-image:url("./css/homeBackground.png");
+   opacity: 0.2;
    background-repeat: no-repeat;
    background-size: contain;*/
  } 
-  .homeSuccess {
-padding: 5px;
-margin: 5px;
+
+.homeSuccess {
+  padding: 5px;
+  margin: 5px;
   }
 
-   .success1, .success2 {
-padding:8px;
+.success1, .success2 {
+  padding:8px;
   }
 
-  .successBody {
-padding: 5px;
+.successBody {
+  padding: 5px;
   }
+
+.animalBody {
+
+
+}
+.moveDown {
+  margin-top:50px;
+ 
+}
+.container {
+  /*background-color: grey;*/
+}
