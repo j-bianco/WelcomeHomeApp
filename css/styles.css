@@ -11,7 +11,7 @@ body {
 .hero {
   font-size: 65 px;
   text-align: center;
-  margin: 40px;
+  margin: 0,40px;
 }
 
 .petNav {
@@ -24,9 +24,30 @@ body {
   padding: 0 20px;
   font-weight: bold;
   font-size: 20px;
+  display: inline;
+ }
+ .petNavItems li {
+   display:inline;
  }
 
 .subHeader {
   text-align: center;
 }
-  
+
+ .homeBody {
+   /*background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVcrrQnjVVFZwQ3FTAruevW_y1CnXwGCKgDjty2_dwkwnWsoutIQ");
+   background-repeat: no-repeat;
+   background-size: contain;*/
+ } 
+  .homeSuccess {
+padding: 5px;
+margin: 5px;
+  }
+
+   .success1, .success2 {
+padding:8px;
+  }
+
+  .successBody {
+padding: 5px;
+  }
