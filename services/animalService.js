@@ -3,4 +3,5 @@ app.service("animalService", function($http){
       return $http.get("http://localhost:5000/api/Animal/")
     }
 
+     
   });

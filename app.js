@@ -1,4 +1,4 @@
-var app = angular.module("petApp", ["ui.router"])
+var app = angular.module("petApp", ["ui.router", "uiGmapgoogle-maps"])
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -48,4 +48,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     })
 
 
+})
+
+.config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+        key: 'AIzaSyCPy9-rXe-uJeoCt6F4XHaDVTJBryOXT-4',
+        v: '3.28', //defaults to latest 3.X anyhow
+        libraries: 'weather,geometry,visualization'
+    });
 })
