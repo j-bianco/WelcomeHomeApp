@@ -17,6 +17,7 @@ namespace PetAPI.Controllers
     public string Breed {get; set;}
     public string Color {get; set;}
     public string Size {get; set;}
+    public string LostOrFound {get; set;}
   }
 
   [Route("api/[controller]")]
@@ -31,9 +32,9 @@ namespace PetAPI.Controllers
 
         if( _context.Animals.Count() == 0)
         {
-          _context.Animals.Add(new Animal() {Id = 1, Name = "Charlie", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/White", Size = "Med"});
-          _context.Animals.Add(new Animal() {Id = 2, Name = "Roxy", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Dark-Brown/White", Size = "Med"});
-          _context.Animals.Add(new Animal() {Id = 3, Name = "Stella", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/Black/Grey/White", Size = "Med"});
+          _context.Animals.Add(new Animal() {Id = 1, Name = "Charlie", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/White", Size = "Med", LostOrFound = "Lost"});
+          _context.Animals.Add(new Animal() {Id = 2, Name = "Roxy", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Dark-Brown/White", Size = "Med", LostOrFound = "Found"});
+          _context.Animals.Add(new Animal() {Id = 3, Name = "Stella", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/Black/Grey/White", Size = "Med", LostOrFound = "Lost"});
           _context.SaveChanges();
         }
 

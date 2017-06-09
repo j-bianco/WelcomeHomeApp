@@ -51,6 +51,10 @@ body {
 .subHeader {
   text-align: center;
 }
+  
+.angular-google-map-container { 
+  height: 400px;
+}
 
  /*.homeBackground {
    background-image:url("./css/homeBackground.png");

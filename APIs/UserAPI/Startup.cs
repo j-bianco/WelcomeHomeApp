@@ -29,7 +29,6 @@ namespace UserAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         { 
-            services.AddCors();
             services.AddDbContext<UserContext>(opt => opt.UseInMemoryDatabase());
             // Add framework services.
             services.AddMvc();
@@ -46,6 +45,8 @@ namespace UserAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            app.UseCors("AllowCors");
+
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 

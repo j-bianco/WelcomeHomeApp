@@ -1,7 +1,21 @@
 <div class="container">
   <div class="row moveDown">
 
+<<<<<<< HEAD
     <h1 class="hero">Here are our animals...</h1>
+=======
+  <h3>My Google Maps Demo</h3>
+    
+  <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+  
+  <div ng-controller="animalController" ng-cloak>
+    <ul ng-repeat="animal in animals">
+      <li>{{ animal.name }}</li>
+      <li>{{ animal.type }}</li>
+      <li>{{ animal.breed }}</li>
+    </ul>
+  </div>
+>>>>>>> e670e8754b2ecba11cd0127511384511f796d136
 
     <div ng-controller="animalController" ng-cloak>
       <ul ng-repeat="animal in animals">
