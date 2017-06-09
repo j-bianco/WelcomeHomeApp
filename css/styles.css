@@ -14,9 +14,9 @@ body {
   margin: 0,40px;
 } 
 
-/*pre {
+pre {
   tab-size: 8;
-      }*/
+}
 
 .side-collapse-container {
   width:100%;
@@ -60,15 +60,15 @@ body {
    background-image:url("./css/homeBackground.png");
    opacity: 0.2;
    background-repeat: no-repeat;
-   background-size: contain;*/
+   background-size: contain;
  } 
-
+*/
 .homeSuccess {
   padding: 5px;
   margin: 5px;
   }
 
-.success1, .success2 {
+.successSto {
   padding:8px;
   }
 
@@ -76,14 +76,26 @@ body {
   padding: 5px;
   }
 
-.animalBody {
-
-
-}
 .moveDown {
   margin-top:50px;
- 
-}
+ }
+
 .container {
-  /*background-color: grey;*/
+  margin: 5px;
 }
+
+ .animalPic>img {
+  height:110px;
+  width: 110px;
+  float:right;
+  }
+
+  .animalName {
+    margin-top: 5px;
+    text-align:center;
+    font-weight:bold;
+  }
+  
+  .animalSto {
+    background-color:lightgray;
+  }
