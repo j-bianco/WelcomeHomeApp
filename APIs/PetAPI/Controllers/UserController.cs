@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
-using UserAPI;
+using PetAPI;
 
-namespace UserAPI.Controllers
+namespace PetAPI.Controllers
 {
     
     public class User
@@ -21,8 +21,8 @@ namespace UserAPI.Controllers
 
     public class UserController : Controller
     {
-      private readonly UserContext _context;
-      public UserController(UserContext context)
+      private readonly AnimalContext _context;
+      public UserController(AnimalContext context)
       {
         _context = context;
 

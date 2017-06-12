@@ -10,6 +10,7 @@ namespace PetAPI
 
     }
     public DbSet<Animal> Animals { get; set; }
+    public DbSet<User> Users { get; set; }
   }
 
 
