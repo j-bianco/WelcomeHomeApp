@@ -1,15 +1,28 @@
-<<<<<<< HEAD
 <div class="container">
   <div class="row moveDown">
     <h1 class="hero">Here is the user info...</h1>
   </div>
 </div>
-=======
   <h1 class="hero">Please create an account.</h1>
-
+  
   <div><input type="text" placeholder="Username" ng-model="username"></div>
   <div><input type="text" placeholder="Password" ng-model="password1"></div>
   <div><input type="text" placeholder="Re-enter Password" ng-model="password2"></div>
   <div><button class="btn btn-primary" ng-click="UserSubmit()">Submit</button></div>
 
->>>>>>> e670e8754b2ecba11cd0127511384511f796d136
+
+  <h1>Create new Post</h1>
+
+  <div><input type="text" placeholder="Name of Pet" ng-model="name"></div>
+  
+  <div><input type="text" placeholder="Type of Pet" ng-model="type"></div>
+  <!----Drop down-->
+  <div><input type="text" placeholder="Breed of Pet" ng-model="breed"></div>
+  <div><input type="text" placeholder="Color of Pet" ng-model="color"></div>
+  <div><input type="text" placeholder="Size of Pet" ng-model="size"></div>
+  <!--Drop Down-->
+  <div><input type="text" placeholder="Is This Pet Lost or Found" ng-model="lostOrFound"></div>
+  <div><input type="date" placeholder="Date Pet was Lost or Found" ng-model="date"></div>
+  <!--Drop Down or switch-->
+  <div><button class="btn btn-primary" ng-click="animalSubmit()">Submit</button></div>
+
