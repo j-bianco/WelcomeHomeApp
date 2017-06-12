@@ -26,7 +26,7 @@ $scope.UserSubmit = function(){
       i++;
     }
     if(_username != user.username){
-      console.log("Username doesnt match.")
+      console.log("Username doesn't match.")
       tempId = user.id;
     }
     

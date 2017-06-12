@@ -6,7 +6,16 @@ body {
   font-size: 20px;
   font-weight: 400;
   font-family: 'Patrick Hand SC', cursive; 
-  }
+}
+
+.homeHeader {
+  text-align: center;
+  padding-top:30px;
+}
+
+.homeConnect {
+  text-align: center;
+}
 
 .hero {
   font-size: 65 px;
@@ -14,7 +23,7 @@ body {
   margin: 0,40px;
 } 
 
-pre {
+/*pre {
   tab-size: 8;
 }
 
@@ -23,11 +32,11 @@ pre {
   position:relative;
   left:0;
   transition:left .4s;
-          }
+}
 
 .side-collapse-container.out {
   left:200px;
-          }
+}
 
 .side-collapse {
   top:50px;
@@ -46,7 +55,7 @@ pre {
 .navbar {
   color: white;
  
- }
+ }*/
 
 .subHeader {
   text-align: center;
@@ -56,13 +65,6 @@ pre {
   height: 400px;
 }
 
- /*.homeBackground {
-   background-image:url("./images/homeBackground.png");
-   opacity: 0.2;
-   background-repeat: no-repeat;
-   background-size: contain;
- } 
-*/
 .homeSuccess {
   padding: 5px;
   margin: 5px;
@@ -70,6 +72,7 @@ pre {
 
 .successSto {
   padding:8px;
+  font-style: italic;
   }
 
 .successBody {
@@ -88,6 +91,9 @@ pre {
   height:110px;
   width: 110px;
   float:right;
+  padding-right: 5px;
+  border-radius: 100%;
+
   }
 
   .animalName {
@@ -99,3 +105,56 @@ pre {
   .animalSto {
     background-color:lightgray;
   }
+
+.petNav ul {
+  width: 100%;
+  }
+
+.petNav li {
+  width:33%;
+  float:left;
+  border-right: 1px solid #eee;
+}
+
+/*.petNav li: last child {
+border-right:none;
+}*/
+
+.petNav li a {
+  display: block;
+  width:80%;
+  background:#ddd;
+  padding:4% 10%;
+  font-size:1.35em;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+		.petNav {
+			width:1.4em;
+			display: block;
+			background:#ddd;
+			font-size:1.35em;
+			text-align: center;
+		}
+		.petNav.js {
+			display: none;
+		}
+		ul {
+			width:100%;
+			list-style:none;
+		}
+		li {
+			width:100%;
+			border-right:none;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		#menu {
+			display: none;
+		}
+	}
+
+
+
