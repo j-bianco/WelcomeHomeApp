@@ -12,6 +12,9 @@ namespace PetAPI.Controllers
   public class Animal
   {
     public int Id {get; set;}
+    public string User {get; set;}
+    public string Location {get; set;}
+    public string Coordinates {get; set;}
     public string Name {get; set;}
     public string Type {get; set;}
     public string Breed {get; set;}
@@ -33,9 +36,9 @@ namespace PetAPI.Controllers
 
         if( _context.Animals.Count() == 0)
         {
-          _context.Animals.Add(new Animal() {Id = 1, Name = "Charlie", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/White", Size = "Med", LostOrFound = "Lost", Date = "6/1/17"});
-          _context.Animals.Add(new Animal() {Id = 2, Name = "Roxy", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Dark-Brown/White", Size = "Med", LostOrFound = "Found", Date = "5/22/17"});
-          _context.Animals.Add(new Animal() {Id = 3, Name = "Stella", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/Black/Grey/White", Size = "Med", LostOrFound = "Lost", Date = "5/13/17"});
+          _context.Animals.Add(new Animal() {Id = 1, User = "rbeardshear", Location ="18835 Winnwood Ln. Santa Ana Ca 92705", Coordinates = "", Name = "Charlie", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/White", Size = "Med", LostOrFound = "Lost", Date = "6/1/17"});
+          _context.Animals.Add(new Animal() {Id = 2, User = "rbeardshear", Location ="9392 Cloudhaven Dr. Huntington Beach Ca 92646", Coordinates = "", Name = "Roxy", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Dark-Brown/White", Size = "Med", LostOrFound = "Found", Date = "5/22/17"});
+          _context.Animals.Add(new Animal() {Id = 3, User = "rbeardshear", Location ="18835 Winnwood Ln. Santa Ana Ca 92705", Coordinates = "", Name = "Stella", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/Black/Grey/White", Size = "Med", LostOrFound = "Lost", Date = "5/13/17"});
           _context.SaveChanges();
         }
 

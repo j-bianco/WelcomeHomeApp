@@ -48,6 +48,7 @@ $scope.UserSubmit = function(){
     console.log(_username)
     console.log(_password1)
     console.log(_password2)
+
     var user = {};
     user.username = _username;
     user.password = _password2;
@@ -72,6 +73,12 @@ $scope.animalSubmit = function(){
   _color = $scope.color;
   _size = $scope.size;
   _lostOrFound = $scope.lostOrFound;
+
+  _address = $scope.address
+  _city = $scope.city
+  _state = $scope.state
+  _zip = $scope.zip
+
   _date = $scope.date;
   $scope.Animals.forEach(function(animal) {
       animalTempId = animal.id;
@@ -85,6 +92,7 @@ $scope.animalSubmit = function(){
     animal.color = _color;
     animal.size = _size;
     animal.lostOrFound = _lostOrFound;
+    animal.location = _address + " " + _city + " " + _state + " " + _zip;
     animal.date = _date;
     animal.id = animalTempId + 1;
     animalService.addAnimal(animal);
