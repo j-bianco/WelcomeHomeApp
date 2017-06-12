@@ -10,6 +10,12 @@
   <div><input type="text" placeholder="Re-enter Password" ng-model="password2"></div>
   <div><button class="btn btn-primary" ng-click="UserSubmit()">Submit</button></div>
 
+<h1 class="hero">Please Sign In.</h1>
+  
+  <div><input type="text" placeholder="Username" ng-model="usernameSignIn"></div>
+  <div><input type="text" placeholder="Password" ng-model="passwordSignin"></div>
+  <div><button class="btn btn-primary" ng-click="SignInSubmit()">Sign In</button></div>  
+
 
   <h1>Create new Post</h1>
 
@@ -17,12 +23,20 @@
   
   <div><input type="text" placeholder="Type of Pet" ng-model="type"></div>
   <!----Drop down-->
+
   <div><input type="text" placeholder="Breed of Pet" ng-model="breed"></div>
   <div><input type="text" placeholder="Color of Pet" ng-model="color"></div>
   <div><input type="text" placeholder="Size of Pet" ng-model="size"></div>
   <!--Drop Down-->
+
   <div><input type="text" placeholder="Is This Pet Lost or Found" ng-model="lostOrFound"></div>
   <div><input type="date" placeholder="Date Pet was Lost or Found" ng-model="date"></div>
   <!--Drop Down or switch-->
+
+  <div><input type="text" placeholder="Street Address" ng-model="address"></div>
+  <div><input type="text" placeholder="City" ng-model="city"></div>
+  <div><input type="text" placeholder="State" ng-model="state"></div>
+  <div><input type="text" placeholder="Zip" ng-model="zip"></div>
+
   <div><button class="btn btn-primary" ng-click="animalSubmit()">Submit</button></div>
 
