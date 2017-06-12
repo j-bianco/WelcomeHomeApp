@@ -1,12 +1,51 @@
 <div class="container">
   <div class="row moveDown">
-   <h1 class="hero">Let's get started.</h1>
-  
- 
-  <div><input type="text" placeholder="Username" ng-model="username"></div>
-  <div><input type="text" placeholder="Password" ng-model="password1"></div>
-  <div><input type="text" placeholder="Re-enter Password" ng-model="password2"></div>
-  <div><button class="btn btn-primary" ng-click="UserSubmit()">Submit</button></div>
+    <h1 class="hero">Let's get started.</h1>
 
-</div>
+    <h2>Please create an account:</h2>
+
+
+    <div class="form-group userInfo">
+      <div><input class="form-control" type="text" placeholder="Username" ng-model="username"></div>
+      <div><input class="form-control" type="text" placeholder="Password" ng-model="password1"></div>
+      <div><input class="form-control" type="text" placeholder="Re-enter Password" ng-model="password2"></div>
+      <div class="submitButton"><button class="btn btn-primary" ng-click="UserSubmit()">Submit</button></div>
+    </div>
+
+    <h2>-OR- Sign In:</h2>
+
+    <div class="form-group userInfo">
+      <div><input class="form-control" type="text" placeholder="Username" ng-model="usernameSignIn"></div>
+      <div><input class="form-control" type="text" placeholder="Password" ng-model="passwordSignin"></div>
+      <div class="submitButton"><button class="btn btn-primary" ng-click="SignIn()">Sign In</button></div>
+    </div>
+
+    <h2>Create new Post:</h2>
+
+    <div class="form-group userInfo">
+
+      <div><input class="form-control" type="text" placeholder="Name of Pet:" ng-model="name"></div>
+
+      <div><input class="form-control" type="text" placeholder="Type of Pet:" ng-model="type"></div>
+      <!--Drop down-->
+
+      <div><input class="form-control" type="text" placeholder="Breed:" ng-model="breed"></div>
+      <div><input class="form-control" type="text" placeholder="Color:" ng-model="color"></div>
+      <div><input class="form-control" type="text" placeholder="Size:" ng-model="size"></div>
+      <!--Drop Down-->
+
+      <div><input class="form-control" type="text" placeholder="Is This Pet LOST or FOUND?" ng-model="lostOrFound"></div>
+      <div><input class="form-control" type="date" placeholder="Date Pet was Lost or Found" ng-model="date"></div>
+      <!--Drop Down or switch-->
+
+      <div><input class="form-control" type="text" placeholder="Street Address:" ng-model="address"></div>
+      <div><input class="form-control" type="text" placeholder="City:" ng-model="city"></div>
+      <div><input class="form-control" type="text" placeholder="State:" ng-model="state"></div>
+      <div><input class="form-control" type="text" placeholder="Zip:" ng-model="zip"></div>
+
+      <div class="submitButton">
+        <button class="btn btn-primary" ng-click="animalSubmit()">Submit</button>
+      </div>
+    </div>
+  </div>
 </div>

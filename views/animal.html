@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row moveDown">
 
+    <h1 class="hero">Here are our animals...</h1>
     <h3>My Google Maps Demo</h3>
 
     <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
@@ -10,8 +11,9 @@
         <li>{{ animal.name }}</li>
         <li>{{ animal.type }}</li>
         <li>{{ animal.breed }}</li>
+        <li>{{ animal.date | date: "shortDate"}}</li>
+        <li>Help</li>
       </ul>
     </div>
-
   </div>
 </div>
