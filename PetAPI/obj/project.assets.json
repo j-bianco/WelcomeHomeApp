@@ -9683,16 +9683,37 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD:PetAPI/obj/project.assets.json
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\kovac\\Desktop\\PetApp\\PetAPI\\PetAPI.csproj",
+      "projectName": "PetAPI",
+      "projectPath": "C:\\Users\\kovac\\Desktop\\PetApp\\PetAPI\\PetAPI.csproj",
+      "outputPath": "C:\\Users\\kovac\\Desktop\\PetApp\\PetAPI\\obj\\",
+=======
+>>>>>>> f5ecae6a0731341dde494f00d913c18eaa274b42:PetAPI/obj/project.assets.json
       "projectUniqueName": "C:\\Users\\User\\Desktop\\Team_JAR\\PetAPI\\PetAPI.csproj",
       "projectName": "PetAPI",
       "projectPath": "C:\\Users\\User\\Desktop\\Team_JAR\\PetAPI\\PetAPI.csproj",
       "outputPath": "C:\\Users\\User\\Desktop\\Team_JAR\\PetAPI\\obj\\",
+<<<<<<< HEAD:PetAPI/obj/project.assets.json
+=======
+>>>>>>> 3896a2606d63acadabcbcfeb6102baa99a2584e6
+>>>>>>> f5ecae6a0731341dde494f00d913c18eaa274b42:PetAPI/obj/project.assets.json
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
+<<<<<<< HEAD:PetAPI/obj/project.assets.json
         "lib/netcoreapp1.1/PetAPI.dll": "C:\\Users\\User\\Desktop\\Team_JAR\\PetAPI\\bin\\placeholder\\netcoreapp1.1\\PetAPI.dll"
+=======
+<<<<<<< HEAD
+        "lib/netcoreapp1.1/PetAPI.dll": "C:\\Users\\kovac\\Desktop\\PetApp\\PetAPI\\bin\\placeholder\\netcoreapp1.1\\PetAPI.dll"
+=======
+        "lib/netcoreapp1.1/PetAPI.dll": "C:\\Users\\User\\Desktop\\Team_JAR\\PetAPI\\bin\\placeholder\\netcoreapp1.1\\PetAPI.dll"
+>>>>>>> 3896a2606d63acadabcbcfeb6102baa99a2584e6
+>>>>>>> f5ecae6a0731341dde494f00d913c18eaa274b42:PetAPI/obj/project.assets.json
       },
       "frameworks": {
         "netcoreapp1.1": {

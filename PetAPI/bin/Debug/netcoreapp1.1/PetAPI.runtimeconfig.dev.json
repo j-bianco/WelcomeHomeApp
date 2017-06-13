@@ -2,6 +2,7 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
       "C:\\Users\\Johnny\\.nuget\\packages"
+      "C:\\Users\\kovac\\.nuget\\packages"
     ]
   }
 }
