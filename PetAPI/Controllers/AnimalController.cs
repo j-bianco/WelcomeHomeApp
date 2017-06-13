@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
 using PetAPI;
 using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace PetAPI.Controllers
 {
@@ -119,7 +120,7 @@ public class RootObject
           _context.Animals.Add(new Animal() {Id = 4, User = "rbeardshear", Location ="1801 E Chestnut Ave Santa Ana CA 92701", Coordinates =Animal.GetCoordinates("1801 E Chestnut Ave Santa Ana CA 92701"), Name = "Lilly", Type = "Cat", Breed = "Exotic Shorthair", Color = "Brown/Grey", Size = "Med", LostOrFound = "Lost", Date = "7/15/17"});
           _context.Animals.Add(new Animal() {Id = 5, User = "rbeardshear", Location ="2500 N Main St Santa Ana CA 92705", Coordinates =Animal.GetCoordinates("2500 N Main St Santa Ana CA 92705"), Name = "Gene", Type = "Dog", Breed = "Bulldog", Color = "Grey/White", Size = "Med", LostOrFound = "Lost", Date = "4/11/17"});
           _context.Animals.Add(new Animal() {Id = 6, User = "rbeardshear", Location ="1800 W Santa Clara Ave Santa Ana CA 92706", Coordinates =Animal.GetCoordinates("1800 W Santa Clara Ave Santa Ana CA 92706"), Name = "Tina", Type = "Cat", Breed = "Maine Coon", Color = "Black/White", Size = "Sm", LostOrFound = "Lost", Date = "9/16/17"});
-          _context.Animals.Add(new Animal() {Id = 7, User = "rbeardshear", Location ="2229 N Spruce St Santa Ana CA 92706", Coordinates =Animal.GetCoordinates"2229 N Spruce St Santa Ana CA 92706"(), Name = "Louise", Type = "Cat", Breed = "Ragdoll", Color = "Orange/White", Size = "Med", LostOrFound = "Lost", Date = "6/13/17"});
+          _context.Animals.Add(new Animal() {Id = 7, User = "rbeardshear", Location ="2229 N Spruce St Santa Ana CA 92706", Coordinates =Animal.GetCoordinates("2229 N Spruce St Santa Ana CA 92706"), Name = "Louise", Type = "Cat", Breed = "Ragdoll", Color = "Orange/White", Size = "Med", LostOrFound = "Lost", Date = "6/13/17"});
           _context.Animals.Add(new Animal() {Id = 8, User = "rbeardshear", Location ="1313 Disneyland Dr Anaheim CA 92802", Coordinates =Animal.GetCoordinates("1313 Disneyland Dr Anaheim CA 92802"), Name = "Mickey", Type = "Dog", Breed = "Beagle", Color = "Brown/White", Size = "Med", LostOrFound = "Lost", Date = "10/1/16"});
           _context.Animals.Add(new Animal() {Id = 9, User = "rbeardshear", Location ="1000 S Harbor Blvd Fullerton CA 92832", Coordinates =Animal.GetCoordinates("1000 S Harbor Blvd Fullerton CA 92832"), Name = "Ace", Type = "Dog", Breed = "Poodle", Color = "Black/Grey", Size = "Lrg", LostOrFound = "Lost", Date = "7/1/17"});
           _context.Animals.Add(new Animal() {Id = 10, User = "rbeardshear", Location ="321 E Chapman Ave Fullerton CA 92832", Coordinates =Animal.GetCoordinates("321 E Chapman Ave Fullerton CA 92832"), Name = "Rocky", Type = "Cat", Breed = "British Shorthair", Color = "Tan", Size = "Sm", LostOrFound = "Lost", Date = "1/1/16"});
