@@ -3,10 +3,22 @@ app.controller("animalController", function($scope, $http, animalService){
 
     // uiGmapGoogleMapApi
     
+    
     animalService.getAnimals().then(function(response){
       $scope.animals = response.data;
+      $scope.map = { center: { latitude: 33.703744, longitude: -117.846525 }, zoom: 10, markers: []};
+    
+      for (var i = 0; i < $scope.animals.length; i++) {
+        var newCoord = $scope.animals[i].coordinates.split(",");
+        var marker  = {
+            id: $scope.animals[i].id,
+            coords: {
+              latitude: newCoord[0],
+              longitude: newCoord[1]
+            }
+          }
+      $scope.map.markers.push(marker)
+      }
     })
 
-    $scope.map = { center: { latitude: 33.703744, longitude: -117.846525 }, zoom: 15 };
-    
-})
+});

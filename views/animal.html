@@ -4,15 +4,15 @@
     <h1 class="hero">Here are our animals...</h1>
     <h3>My Google Maps Demo</h3>
 
-    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'> <ui-gmap-marker ng-repeat="m in map.markers | filter: clickText" coords="m.coords" icon="m.icon" idkey="m.id"></ui-gmap-google-map>
 
 
-  <button class="fiterLost col-sm-6">Lost</button>
+  <button class="filterLost col-sm-6" >Lost</button>
   <button class="filterFound col-sm-6">Found</button>
-  <button class="filterAll col-sm-6">All</button>
+  <button class="filterAll col-sm-6" >All</button>
 
           <div ng-controller="lostController" ng-cloak>
-        <ul ng-repeat="animal in animals | filter:searchText">
+        <ul ng-repeat="animal in animals | filter: clickText">
 
           <h2 class="animalName">{{ animal.name }}</h2>
           <div class="animalPic"><img src=".\images\Sheepdog.jpg" alt="Jack's Pic"></div>
