@@ -6,16 +6,6 @@
 
     <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
 
-    <div ng-controller="animalController" ng-cloak>
-      <ul ng-repeat="animal in animals">
-        <li>{{ animal.name }}</li>
-        <li>{{ animal.type }}</li>
-        <li>{{ animal.breed }}</li>
-        <li>{{ animal.date | date: "shortDate"}}</li>
-        <li>Help</li>
-      </ul>
-    </div>
-  <label>Search: <input ng-model="searchText"></label>
 
   <button class="fiterLost col-sm-6">Lost</button>
   <button class="filterFound col-sm-6">Found</button>
