@@ -27,7 +27,6 @@ animalService.getAnimals().then(function(response){
   $scope.Animals = response.data;
 })
 
-
 // ________________________User form_____________________________
 $scope.UserSubmit = function(){
   _username = $scope.username;
@@ -104,7 +103,6 @@ $scope.animalSubmit = function(){
   $scope.Animals.forEach(function(animal) {
       animalTempId = animal.id;
     }, this);
-
 
     var animal = {};
     animal.name = _name;
