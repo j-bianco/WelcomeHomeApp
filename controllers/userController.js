@@ -5,6 +5,8 @@ var _username;
 var _password1;
 var _password2;
 
+var SignedInUser;
+
 var _name;
 var _type;
 var _breed;
@@ -25,6 +27,7 @@ animalService.getAnimals().then(function(response){
   $scope.Animals = response.data;
 })
 
+// ________________________User form_____________________________
 $scope.UserSubmit = function(){
   _username = $scope.username;
   _password1 = $scope.password1;
@@ -39,7 +42,7 @@ $scope.UserSubmit = function(){
       i++;
     }
     if(_username != user.username){
-      console.log("Username doesnt match.")
+      console.log("Username doesn't match.")
       tempId = user.id;
     }
     
@@ -58,10 +61,27 @@ $scope.UserSubmit = function(){
   $scope.Users = response.data;
 })
     }
+    $scope.username = "";
+    $scope.password1 = "";
+    $scope.password2 = "";
     i = 0;
 };
 
 
+// _______________________Sign In form___________________________
+$scope.SignIn = function(){
+  $scope.Users.forEach(function(User) {
+    if( ($scope.usernameSignIn == User.username) && ($scope.passwordSignin == User.password) ) {
+      SignedInUser = $scope.usernameSignIn;
+    }
+    else{
+      console.log("Username or password not Correct")
+    }
+  }, this);
+  console.log(SignedInUser);
+  $scope.usernameSignIn = "";
+  $scope.passwordSignin = "";
+}
 
 
 // _______________________Animal form____________________________
@@ -84,7 +104,6 @@ $scope.animalSubmit = function(){
       animalTempId = animal.id;
     }, this);
 
-
     var animal = {};
     animal.name = _name;
     animal.type = _type;
@@ -95,11 +114,23 @@ $scope.animalSubmit = function(){
     animal.location = _address + " " + _city + " " + _state + " " + _zip;
     animal.date = _date;
     animal.id = animalTempId + 1;
+    animal.user = SignedInUser
     animalService.addAnimal(animal);
     animalTempId = 0;
     animalService.getAnimals().then(function(response){
       $scope.Animals = response.data;
 })
+$scope.name = "";
+$scope.type = "";
+$scope.breed = "";
+$scope.color = "";
+$scope.size = "";
+$scope.lostOrFound = "";
+$scope.date = "";
+$scope.address = "";
+$scope.city = "";
+$scope.state = "";
+$scope.zip = "";
 }
     
 });

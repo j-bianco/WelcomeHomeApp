@@ -2,19 +2,53 @@
   <div class="row moveDown">
 
     <h1 class="hero">Here are our animals...</h1>
-  <h3>My Google Maps Demo</h3>
-    
-  <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+    <h3>My Google Maps Demo</h3>
 
-    <div ng-controller="animalController" ng-cloak>
-      <ul ng-repeat="animal in animals">
-        <li>{{ animal.name }}</li>
-        <li>{{ animal.type }}</li>
-        <li>{{ animal.breed }}</li>
-        <li>{{ animal.date | date:  "shortDate"}}</li>
-        <li>Help</li>
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+
+
+  <button class="fiterLost col-sm-6">Lost</button>
+  <button class="filterFound col-sm-6">Found</button>
+  <button class="filterAll col-sm-6">All</button>
+
+          <div ng-controller="lostController" ng-cloak>
+        <ul ng-repeat="animal in animals | filter:searchText">
+
+          <h2 class="animalName">{{ animal.name }}</h2>
+          <div class="animalPic"><img src=".\images\Sheepdog.jpg" alt="Jack's Pic"></div>
+
+          <div class="animalInfo">
+
+            <div class="animalId">
+              <p>Id: {{ animal.id }}</p>
+            </div>
+            <div class="animalBreed">
+              <p>{{ animal.breed }}</p>
+            </div>
+            <div class="animalColor">
+              <p>{{ animal.color }}</p>
+            </div>
+            <div class="animalDate">
+              <p>Date Lost: {{ animal.date | date: shortDate}}</p>
+            </div>
+            <div class="animalLocation">
+              <p>Location: {{ animal.location }}</p>
+            </div>
+            <div class="animalDesc">
+              <p>Description: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sunt saepe qui at ab nostrum
+                dicta necessitatibus ducimus voluptatibus sed quidem ipsum, rerum voluptates distinctio cum fuga. Voluptates
+                modi, sequi."</p>
+            </div>
+          </div>
+      </div>
+
       </ul>
     </div>
+
+    
+  </div>
+</div>
+</div>
 
   </div>
 </div>

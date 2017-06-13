@@ -1,8 +1,0 @@
-C:\Users\User\Desktop\Team_JAR\APIs\UserAPI\bin\Debug\netcoreapp1.1\UserAPI.deps.json
-C:\Users\User\Desktop\Team_JAR\APIs\UserAPI\bin\Debug\netcoreapp1.1\UserAPI.runtimeconfig.json
-C:\Users\User\Desktop\Team_JAR\APIs\UserAPI\bin\Debug\netcoreapp1.1\UserAPI.runtimeconfig.dev.json
-C:\Users\User\Desktop\Team_JAR\APIs\UserAPI\obj\Debug\netcoreapp1.1\UserAPI.AssemblyInfo.cs
-C:\Users\User\Desktop\Team_JAR\APIs\UserAPI\bin\Debug\netcoreapp1.1\UserAPI.dll
-C:\Users\User\Desktop\Team_JAR\APIs\UserAPI\bin\Debug\netcoreapp1.1\UserAPI.pdb
-C:\Users\User\Desktop\Team_JAR\APIs\UserAPI\obj\Debug\netcoreapp1.1\UserAPI.dll
-C:\Users\User\Desktop\Team_JAR\APIs\UserAPI\obj\Debug\netcoreapp1.1\UserAPI.pdb
