@@ -18,7 +18,8 @@ body {
   padding-top:30px;
 }
 .homeGreet {
-  background-color: red;
+  background-color: #6fff6f;
+  width: 100vw;
 }
 
 .homeConnect {

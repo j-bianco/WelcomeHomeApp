@@ -48,8 +48,8 @@ namespace PetAPI.Controllers
           _context.Animals.Add(new Animal() {Id = 10, User = "rbeardshear", Location ="18835 Winnwood Ln. Santa Ana Ca 92705", Coordinates = "", Name = "Rocky", Type = "Cat", Breed = "British Shorthair", Color = "Tan", Size = "Sm", LostOrFound = "Lost", Date = "1/1/16"});
           _context.Animals.Add(new Animal() {Id = 11, User = "rbeardshear", Location ="18835 Winnwood Ln. Santa Ana Ca 92705", Coordinates = "", Name = "Milo", Type = "Dog", Breed = "Rottweiler", Color = "Tan/White", Size = "Lrg", LostOrFound = "Lost", Date = "5/12/16"});
           _context.Animals.Add(new Animal() {Id = 12, User = "rbeardshear", Location ="18835 Winnwood Ln. Santa Ana Ca 92705", Coordinates = "", Name = "Pretty Boy", Type = "Turtle", Breed = "Box Turtle", Color = "Green", Size = "Sm", LostOrFound = "Lost", Date = "5/16/17"});
-          _context.Animals.Add(new Animal() {Id = 12, User = "rbeardshear", Location ="9392 Cloudhaven Dr. Huntington Beach Ca 92646", Coordinates = "", Name = "Roxy", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Dark-Brown/White", Size = "Med", LostOrFound = "Found", Date = "5/22/17"});
-          _context.Animals.Add(new Animal() {Id = 13, User = "rbeardshear", Location ="18835 Winnwood Ln. Santa Ana Ca 92705", Coordinates = "", Name = "Stella", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/Black/Grey/White", Size = "Med", LostOrFound = "Lost", Date = "5/13/17"});
+          _context.Animals.Add(new Animal() {Id = 13, User = "rbeardshear", Location ="9392 Cloudhaven Dr. Huntington Beach Ca 92646", Coordinates = "", Name = "Roxy", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Dark-Brown/White", Size = "Med", LostOrFound = "Found", Date = "5/22/17"});
+          _context.Animals.Add(new Animal() {Id = 14, User = "rbeardshear", Location ="18835 Winnwood Ln. Santa Ana Ca 92705", Coordinates = "", Name = "Stella", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/Black/Grey/White", Size = "Med", LostOrFound = "Lost", Date = "5/13/17"});
           _context.SaveChanges();
         }
 
