@@ -2,17 +2,20 @@
   <div class="row moveDown">
 
     <h1 class="hero">..</h1>
-    <h3>My Google Maps Demo</h3>
+    
 
     <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
 
-
-  <button class="fiterLost col-sm-6">Lost</button>
-  <button class="filterFound col-sm-6">Found</button>
-  <button class="filterAll col-sm-6">All</button>
+<h3>Select search type:</h3>
+  <div class="form-group col-md-6">
+    <button class="filterLost" ng-show="filterLostButton" ng-click="filterLost()">Lost</button>
+  <button class="filterFound" ng-show="filterFoundButton" ng-click="filterFound()">Found</button>
+  <button class="filterAll">All</button>
+  </div>
 
           <div ng-controller="lostController" ng-cloak>
         <ul ng-repeat="animal in animals | filter:searchText">
+          
 
           <h2 class="animalName">{{ animal.name }}</h2>
           <div class="animalPic"><img src=".\images\Sheepdog.jpg" alt="Jack's Pic"></div>
