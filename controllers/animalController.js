@@ -1,6 +1,6 @@
 app.controller("animalController", function($scope, $http, animalService){
     $scope.animals = [];
-
+    $scope.filterAll = true;
     // uiGmapGoogleMapApi
     
     animalService.getAnimals().then(function(response){

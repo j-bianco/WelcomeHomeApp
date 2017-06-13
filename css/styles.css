@@ -74,11 +74,6 @@ pre {
   height: 400px;
 }
 
-.homeSuccess {
-  padding: 5px;
-  margin: 5px;
-  }
-
 .successSto {
   padding:8px;
   font-style: italic;
@@ -89,7 +84,8 @@ pre {
   }
 
 .moveDown {
-  margin-top:50px;
+  margin-top: 50px;
+  margin-left: -20px;
  }
 
 
@@ -131,10 +127,12 @@ pre {
   .foundAnimalCard{
     background-color: #6fff6f;
     padding: 2%;
+    margin-left: 1%;
   }
   .lostAnimalCard{
     background-color: #f26262;
     padding: 2%;
+    margin-left: 1%;
   }
 
   .ngRepeat{
