@@ -16,7 +16,21 @@
           <div ng-controller="lostController" ng-cloak>
         <ul ng-repeat="animal in animals | filter:searchText">
           
+    <h1 class="hero">Here are our animals...</h1>
+    <h3>My Google Maps Demo</h3>
 
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+
+
+    <button class="filterBtn col-sm-6">Lost</button>
+    <button class="filterBtn col-sm-6">Found</button>
+    <button class="filterBtn col-sm-6">All</button>
+    <input id="searchBar" type="text" placeholder="Search..." ng-model="searchText">
+
+
+    <div ng-controller="lostController" ng-cloak>
+      <ul class="ngRepeat" ng-repeat="animal in animals | filter:searchText">
+        <div class="animalCard">
           <h2 class="animalName">{{ animal.name }}</h2>
           <div class="animalPic"><img src=".\images\Sheepdog.jpg" alt="Jack's Pic"></div>
 
@@ -43,15 +57,79 @@
                 modi, sequi."</p>
             </div>
           </div>
-      </div>
-
-      </ul>
+        </div>
     </div>
+    </ul>
 
-    
+    <ul class="ngRepeat" ng-repeat="animal in animals | filter:searchText | filter:'lost'">
+        <div class="lostAnimalCard">
+          <h2 class="animalName">{{ animal.name }}</h2>
+          <div class="animalPic"><img src=".\images\Sheepdog.jpg" alt="Jack's Pic"></div>
+
+          <div class="animalInfo">
+
+            <div class="animalId">
+              <p>Id: {{ animal.id }}</p>
+            </div>
+            <div class="animalBreed">
+              <p>{{ animal.breed }}</p>
+            </div>
+            <div class="animalColor">
+              <p>{{ animal.color }}</p>
+            </div>
+            <div class="animalDate">
+              <p>Date Lost: {{ animal.date | date: shortDate}}</p>
+            </div>
+            <div class="animalLocation">
+              <p>Location: {{ animal.location }}</p>
+            </div>
+            <div class="animalDesc">
+              <p>Description: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sunt saepe qui at ab nostrum
+                dicta necessitatibus ducimus voluptatibus sed quidem ipsum, rerum voluptates distinctio cum fuga. Voluptates
+                modi, sequi."</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    </ul>
+
+    <ul class="ngRepeat" ng-repeat="animal in animals | filter:searchText | filter:'Found'">
+        <div class="foundAnimalCard">
+          <h2 class="animalName">{{ animal.name }}</h2>
+          <div class="animalPic"><img src=".\images\Sheepdog.jpg" alt="Jack's Pic"></div>
+
+          <div class="animalInfo">
+
+            <div class="animalId">
+              <p>Id: {{ animal.id }}</p>
+            </div>
+            <div class="animalBreed">
+              <p>{{ animal.breed }}</p>
+            </div>
+            <div class="animalColor">
+              <p>{{ animal.color }}</p>
+            </div>
+            <div class="animalDate">
+              <p>Date Lost: {{ animal.date | date: shortDate}}</p>
+            </div>
+            <div class="animalLocation">
+              <p>Location: {{ animal.location }}</p>
+            </div>
+            <div class="animalDesc">
+              <p>Description: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sunt saepe qui at ab nostrum
+                dicta necessitatibus ducimus voluptatibus sed quidem ipsum, rerum voluptates distinctio cum fuga. Voluptates
+                modi, sequi."</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    </ul>
   </div>
+
+
 </div>
 </div>
+</div>
 
-  </div>
+</div>
 </div>
