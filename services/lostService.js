@@ -1,5 +1,3 @@
-angular
-  .module("petApp")
-  .service("lostService", function($http) {
+app.service("lostService", function($http) {
   
 })
