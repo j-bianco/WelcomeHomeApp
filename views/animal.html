@@ -12,10 +12,6 @@
     <button class="filterBtn col-sm-6" ng-click="allButton()">All</button>
     <input id="searchBar" type="text" placeholder="Search..." ng-model="searchText">
 
-  <button class="filterLost col-sm-6" >Lost</button>
-  <button class="filterFound col-sm-6">Found</button>
-  <button class="filterAll col-sm-6" >All</button>
-
           <div ng-controller="lostController" ng-cloak>
         <ul ng-repeat="animal in animals | filter: clickText">
 
