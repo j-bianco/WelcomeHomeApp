@@ -84,7 +84,7 @@ pre {
   }
 
 .moveDown {
-  margin-top: 50px;
+  margin-top: 20%;
   margin-left: -20px;
  }
 
@@ -140,6 +140,8 @@ pre {
 
   #searchBar{
     width: 100vw;
+    border: 2px solid black;
+    margin: 2% 0 0;
   }
 
   .filterBtn{
@@ -161,7 +163,19 @@ pre {
   padding: 8px;
   margin: 8px;
 }
-  .helpCont {
+  
+.helpCont {
   font-family: 'Archivo Narrow', sans-serif;
-    
   }
+
+.helpResource {
+  text-align: center;
+  font-weight: bold;
+}
+
+.helpImage>img {
+  width: 50px !important;
+  height:50px !important;
+  padding: 5px;
+  margin: 5px;
+ }
