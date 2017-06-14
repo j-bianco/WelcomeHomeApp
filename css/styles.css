@@ -124,12 +124,12 @@ pre {
     padding: 5px;
   }
 
-  .foundAnimalCard{
-    background-color: #6fff6f;
+  .FoundAnimalCard{
+    background-color: #6496F6;
     padding: 2%;
     margin-left: 1%;
   }
-  .lostAnimalCard{
+  .LostAnimalCard{
     background-color: #f26262;
     padding: 2%;
     margin-left: 1%;
