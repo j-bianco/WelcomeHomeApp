@@ -10,6 +10,8 @@
         <div><input class="form-control" type="text" placeholder="Password" ng-model="password1"></div>
         <div><input class="form-control" type="text" placeholder="Re-enter Password" ng-model="password2"></div>
         <div class="submitButton"><button class="btn btn-primary" ng-click="UserSubmit()">Submit</button></div>
+        <p ng-show="signUpWarn" class="warn">*Please Fill Out All Feilds.</p>
+        <p ng-show="passwordWarn" class="warn">*Passwords Do Not Match.</p>
         <h2>-OR-</h2>
         <div class="submitButton"><button class="btn btn-primary" ng-click="SignInForm()">Sign In</button></div>
       </div>
@@ -48,6 +50,7 @@
         <div><input class="form-control" type="text" placeholder="Zip:" ng-model="zip"></div>
         <div class="submitButton">
           <button class="btn btn-primary" ng-click="animalSubmit()">Submit</button>
+          <p ng-show="postWarn" class="warn">*Please Fill Out All Feilds.</p>
         </div>
         <h2>-OR-</h2>
         <div class="submitButton"><button class="btn btn-primary" ng-click="SignInForm()">Sign In</button></div>

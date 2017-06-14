@@ -1,15 +1,7 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-<<<<<<< HEAD
-<<<<<<< HEAD
       "C:\\Users\\User\\.nuget\\packages"
-=======
-      "C:\\Users\\kovac\\.nuget\\packages"
->>>>>>> cf3c094e57b50628965b3ac82f806d215aab40b5
-=======
-      "C:\\Users\\Johnny\\.nuget\\packages"
->>>>>>> f85954577a918b5d85eba43638e444b8122ab5a9
     ]
   }
 }

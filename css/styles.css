@@ -15,11 +15,12 @@ body {
 
 .homeHeader {
   text-align: center;
-  padding-top:30px;
+  padding:3%;
 }
 .homeGreet {
   background-color: #6fff6f;
   width: 100vw;
+  padding-bottom: 2%;
 }
 
 .homeConnect {
@@ -63,6 +64,7 @@ pre {
 
 .navbar {
   color: white;
+  padding-bottom: 2%;
  
  }
 
@@ -84,7 +86,7 @@ pre {
   }
 
 .moveDown {
-  margin-top: 20%;
+  margin-top: 18%;
   margin-left: -20px;
  }
 
