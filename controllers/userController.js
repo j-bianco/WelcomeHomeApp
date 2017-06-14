@@ -17,7 +17,7 @@ var _date;
 $scope.Users = [];
 $scope.Animals = []
 var tempId = 0;
-var animaTempId = 0;
+var animalTempId = 0;
 var i = 0;
 
 userService.getUser().then(function(response){

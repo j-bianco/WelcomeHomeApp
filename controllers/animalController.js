@@ -21,4 +21,27 @@ app.controller("animalController", function($scope, $http, animalService){
       }
     })
 
-});
+  
+  $scope.filterAll = true;
+
+
+
+  $scope.foundButton = function() {
+    $scope.filterFound = true;
+    $scope.filterLost = false;
+    $scope.filterAll = false;
+  }
+
+  $scope.lostButton = function() {
+    $scope.filterFound = false;
+    $scope.filterLost = true;
+    $scope.filterAll = false;
+   
+  }
+
+  $scope.allButton = function() {
+    $scope.filterFound = false;
+    $scope.filterLost = false;
+    $scope.filterAll = true;
+  }
+})
