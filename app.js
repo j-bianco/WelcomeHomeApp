@@ -17,10 +17,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       controller: "userController"
     })
 
-    .state("map", {
-      url: "/map",
-      templateUrl: "./views/map.html",
-      controller: "mapController"
+    .state("help", {
+      url: "/help",
+      templateUrl: "./views/help.html",
+      controller: "helpController"
     })
 
     .state("animal", {
