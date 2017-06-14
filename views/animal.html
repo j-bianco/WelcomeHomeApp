@@ -5,15 +5,16 @@
 
     <h1 class="hero">Here are our animals...</h1>
 
-    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'> <ui-gmap-marker ng-repeat="m in map.markers | filter: clickText" coords="m.coords" icon="m.icon" idkey="m.id"></ui-gmap-google-map>
 
     <button class="filterBtn col-sm-6" ng-click="lostButton()">Lost</button>
     <button class="filterBtn col-sm-6" ng-click="foundButton()">Found</button>
     <button class="filterBtn col-sm-6" ng-click="allButton()">All</button>
     <input id="searchBar" type="text" placeholder="Search..." ng-model="searchText">
 
+          <div ng-controller="lostController" ng-cloak>
+        <ul ng-repeat="animal in animals | filter: clickText">
 
-    <div ng-controller="lostController" ng-cloak>
       <!--____________________________________________________ALL_______________________________________________________________-->
       <ul ng-show="filterAll" class="ngRepeat" ng-repeat="animal in animals | filter:searchText | filter:'Found'">
         <div class="foundAnimalCard">
