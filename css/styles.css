@@ -147,4 +147,10 @@ pre {
     width: 31vw;
   }
 
+  .coloredSuccess{
+    background-color: #6fff6f;
+    width: 100vw;
+    margin-left: -5px;
+    padding-bottom: 1%;
+}
   
