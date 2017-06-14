@@ -10,9 +10,9 @@
     <button class="filterBtn col-sm-6" ng-click="lostButton()">Lost</button>
     <button class="filterBtn col-sm-6" ng-click="foundButton()">Found</button>
     <button class="filterBtn col-sm-6" ng-click="allButton()">All</button>
-    <input id="searchBar" type="text" placeholder="Search..." ng-model="searchText">
+    <input id="searchBar" class="form-group" type="text" placeholder="Search..." ng-model="searchText">
 
-          <div ng-controller="lostController" ng-cloak>
+          <!--<div ng-controller="lostController" ng-cloak>-->
         <ul ng-repeat="animal in animals | filter: clickText">
 
       <!--____________________________________________________ALL_______________________________________________________________-->
@@ -138,7 +138,6 @@
           </div>
         </div>
       </div>
-  </div>
   </ul>
 </div>
 

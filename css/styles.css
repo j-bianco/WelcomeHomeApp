@@ -141,6 +141,8 @@ pre {
 
   #searchBar{
     width: 100vw;
+    border: 2px solid black;
+    margin: 2% 0 0;
   }
 
   .filterBtn{
@@ -154,3 +156,6 @@ pre {
     padding-bottom: 1%;
 }
   
+  .warn{
+    color: red;
+  }
