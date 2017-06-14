@@ -8,7 +8,7 @@ body {
   font-family: 'Patrick Hand SC', cursive; 
   }
 
-  .container {
+.container {
   margin: 5px;
   }
 
@@ -113,13 +113,12 @@ pre {
     width: 85%;
     display: block;
     margin: 0 auto;
-   
-
   }
 
   .userInfo input {
  font-size: 20px !important;
   }
+  
   .submitButton {
     padding: 5px;
   }
@@ -129,6 +128,7 @@ pre {
     padding: 2%;
     margin-left: 1%;
   }
+  
   .lostAnimalCard{
     background-color: #f26262;
     padding: 2%;
@@ -146,5 +146,9 @@ pre {
   .filterBtn{
     width: 31vw;
   }
-
   
+
+li {
+  list-style: none !important;
+  padding-top: 10px;
+}
