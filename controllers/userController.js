@@ -5,7 +5,7 @@ angular
     var _password1;
     var _password2;
 
-    var SignedInUser;
+    $scope.SignedInUser = "";
 
     var _name;
     var _type;
@@ -45,6 +45,7 @@ angular
     $scope.wrongInfoWarn = false;
     $scope.signUpWarn = false;
     $scope.passwordWarn = false;
+    $scope.usernameWarn = false;
 
 
     userService.getUser().then(function (response) {
@@ -69,9 +70,10 @@ angular
           $scope.passwordWarn = true;
         }
         else {
+          $scope.passwordWarn = false;
           $scope.Users.forEach(function (user) {
             if (_username == user.username) {
-              console.log("Username taken")
+              $scope.usernameWarn = true;
               i++;
             }
             if (_username != user.username) {
@@ -81,7 +83,8 @@ angular
 
           }, this);
           if (i <= 0) {
-            console.log(_username)
+            $scope.SignedInUser = $scope.username;
+            console.log($scope.SignedInUser)
             console.log(_password1)
             console.log(_password2)
 
@@ -89,17 +92,20 @@ angular
             user.username = _username;
             user.password = _password2;
             user.id = tempId + 1;
+            
             userService.addUser(user);
+            $scope.usernameWarn = false;
+            $scope.username = "";
+            $scope.password1 = "";
+            $scope.password2 = "";
             userService.getUser().then(function (response) {
               $scope.Users = response.data;
+            })
               $scope.createPost = true;
               $scope.createAcc = false;
               $scope.signInAcc = false;
-            })
           }
-          $scope.username = "";
-          $scope.password1 = "";
-          $scope.password2 = "";
+          
           i = 0;
         }
       }
@@ -117,7 +123,7 @@ angular
       if (true) {
         $scope.Users.forEach(function (User) {
           if (($scope.usernameSignIn == User.username) && ($scope.passwordSignIn == User.password)) {
-            SignedInUser = $scope.usernameSignIn;
+            $scope.SignedInUser = $scope.usernameSignIn;
             $scope.createPost = true;
             $scope.createAcc = false;
             $scope.signInAcc = false;
@@ -128,7 +134,7 @@ angular
             console.log("Username or Password not Correct")
           }
         }, this);
-        console.log(SignedInUser);
+        console.log($scope.SignedInUser);
         $scope.usernameSignIn = "";
         $scope.passwordSignin = "";
 
@@ -170,7 +176,7 @@ angular
         animal.location = _address + " " + _city + " " + _state + " " + _zip;
         animal.date = _date;
         animal.id = animalTempId + 1;
-        animal.user = SignedInUser
+        animal.user = $scope.SignedInUser
         animalService.addAnimal(animal);
         animalTempId = 0;
         animalService.getAnimals().then(function (response) {

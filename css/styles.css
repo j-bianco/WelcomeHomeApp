@@ -181,3 +181,6 @@ pre {
   padding: 5px;
   margin: 5px;
  }
+ .warn{
+   color: red;
+ }
