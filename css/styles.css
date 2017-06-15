@@ -8,18 +8,19 @@ body {
   font-family: 'Patrick Hand SC', cursive; 
   }
 
-  .container {
+.container {
   margin: 5px;
   }
 
 
 .homeHeader {
   text-align: center;
-  padding-top:30px;
+  padding:3%;
 }
 .homeGreet {
   background-color: #6fff6f;
   width: 100vw;
+  padding-bottom: 2%;
 }
 
 .homeConnect {
@@ -63,6 +64,7 @@ pre {
 
 .navbar {
   color: white;
+  padding-bottom: 2%;
  
  }
 
@@ -84,7 +86,7 @@ pre {
   }
 
 .moveDown {
-  margin-top: 50px;
+  margin-top: 18%;
   margin-left: -20px;
  }
 
@@ -113,13 +115,12 @@ pre {
     width: 85%;
     display: block;
     margin: 0 auto;
-   
-
   }
 
   .userInfo input {
- font-size: 20px !important;
+    font-size: 20px !important;
   }
+  
   .submitButton {
     padding: 5px;
   }
@@ -141,12 +142,18 @@ pre {
 
   #searchBar{
     width: 100vw;
+    border: 2px solid black;
+    margin: 2% 0 0;
   }
 
   .filterBtn{
     width: 31vw;
   }
-
+  
+  li {
+  list-style: none !important;
+  padding-top: 10px;
+}
   .coloredSuccess{
     background-color: #6fff6f;
     width: 100vw;
@@ -158,3 +165,23 @@ pre {
   padding: 10px;
 }
   
+.animalHero, .helpHero {
+  padding: 8px;
+  margin: 8px;
+}
+  
+.helpCont {
+  font-family: 'Archivo Narrow', sans-serif;
+  }
+
+.helpResource {
+  text-align: center;
+  font-weight: bold;
+}
+
+.helpImage>img {
+  width: 50px !important;
+  height:50px !important;
+  padding: 5px;
+  margin: 5px;
+ }
