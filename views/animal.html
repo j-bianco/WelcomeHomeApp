@@ -5,7 +5,9 @@
 
     <h1 class="hero">Here are our animals...</h1>
 
-    <ui-gmap-google-map center='map.center' zoom='map.zoom'> <ui-gmap-marker ng-repeat="m in map.markers | filter: clickText | filter: searchText" coords="m.coords" icon="m.icon" idkey="m.id"></ui-gmap-google-map>
+    <div class="map">
+      <ui-gmap-google-map center='map.center' zoom='map.zoom'> <ui-gmap-marker ng-repeat="m in map.markers | filter: clickText | filter: searchText" coords="m.coords" icon="m.icon" idkey="m.id"></ui-gmap-google-map>
+    </div>
 
     <button class="filterBtn col-sm-4"  ng-click="clickText = 'lost'">Lost</button>
     <button class="filterBtn col-sm-4" ng-click="clickText = 'found'">Found</button>
@@ -16,7 +18,7 @@
       <ul class="ngRepeat" ng-repeat="animal in animals | filter: clickText | filter: searchText">
         <div class="{{animal.lostOrFound}}AnimalCard">
           <h2 class="animalName">{{ animal.name }}</h2>
-          <div class="animalPic"><img src=".\images\Sheepdog.jpg" alt="Jack's Pic"></div>
+          <div class="animalPic"><img ng-cloak src="{{animal.image}}" alt="{{animal.name}} Pic"></div>
 
           <div class="animalInfo">
 

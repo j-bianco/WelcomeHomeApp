@@ -100,6 +100,7 @@ $scope.animalSubmit = function(){
   _zip = $scope.zip
 
   _date = $scope.date;
+  _image = $scope.image
   $scope.Animals.forEach(function(animal) {
       animalTempId = animal.id;
     }, this);
@@ -113,6 +114,7 @@ $scope.animalSubmit = function(){
     animal.lostOrFound = _lostOrFound;
     animal.location = _address + " " + _city + " " + _state + " " + _zip;
     animal.date = _date;
+    animal.image = _image;
     animal.id = animalTempId + 1;
     animal.user = SignedInUser
     animalService.addAnimal(animal);
@@ -131,6 +133,7 @@ $scope.address = "";
 $scope.city = "";
 $scope.state = "";
 $scope.zip = "";
+$scope.image = "";
 }
     
 });

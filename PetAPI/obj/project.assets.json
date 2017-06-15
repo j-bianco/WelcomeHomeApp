@@ -9683,16 +9683,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Johnny\\Desktop\\Team_JAR\\PetAPI\\PetAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Johnny\\Desktop\\Team_JAR\\PetAPI\\PetAPI.csproj",
       "projectName": "PetAPI",
-      "projectPath": "c:\\Users\\Johnny\\Desktop\\Team_JAR\\PetAPI\\PetAPI.csproj",
-      "outputPath": "c:\\Users\\Johnny\\Desktop\\Team_JAR\\PetAPI\\obj\\",
+      "projectPath": "C:\\Users\\Johnny\\Desktop\\Team_JAR\\PetAPI\\PetAPI.csproj",
+      "outputPath": "C:\\Users\\Johnny\\Desktop\\Team_JAR\\PetAPI\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/PetAPI.dll": "c:\\Users\\Johnny\\Desktop\\Team_JAR\\PetAPI\\bin\\placeholder\\netcoreapp1.1\\PetAPI.dll"
+        "lib/netcoreapp1.1/PetAPI.dll": "C:\\Users\\Johnny\\Desktop\\Team_JAR\\PetAPI\\bin\\placeholder\\netcoreapp1.1\\PetAPI.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {
