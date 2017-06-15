@@ -7,4 +7,7 @@ app.service("animalService", function ($http) {
     return $http.post("http://localhost:5000/api/Animal/", animal)
   }
 
+  this.getMapStuff = function() {
+    return { center: { latitude:33.816985, longitude: -117.890241 }, zoom: 10, markers: []};
+  }
 });

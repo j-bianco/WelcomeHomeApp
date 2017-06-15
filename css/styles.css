@@ -161,6 +161,10 @@ pre {
     padding-bottom: 1%;
 }
 
+.map {
+  padding: 10px;
+}
+  
 .animalHero, .helpHero {
   padding: 8px;
   margin: 8px;
