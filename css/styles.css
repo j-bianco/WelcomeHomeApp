@@ -118,7 +118,7 @@ pre {
   }
 
   .userInfo input {
- font-size: 20px !important;
+    font-size: 20px !important;
   }
   
   .submitButton {
@@ -150,8 +150,7 @@ pre {
     width: 31vw;
   }
   
-
-li {
+  li {
   list-style: none !important;
   padding-top: 10px;
 }
@@ -162,6 +161,23 @@ li {
     padding-bottom: 1%;
 }
 
-  .warn{
-    color: red;
+.animalHero, .helpHero {
+  padding: 8px;
+  margin: 8px;
+}
+  
+.helpCont {
+  font-family: 'Archivo Narrow', sans-serif;
   }
+
+.helpResource {
+  text-align: center;
+  font-weight: bold;
+}
+
+.helpImage>img {
+  width: 50px !important;
+  height:50px !important;
+  padding: 5px;
+  margin: 5px;
+ }
