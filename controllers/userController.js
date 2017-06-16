@@ -120,7 +120,6 @@ angular
       }
     };
 
-
     // _______________________Sign In form___________________________
     $scope.SignIn = function () {
       if (($scope.usernameSignIn == "") || ($scope.passwordSignIn == "")) {
@@ -152,7 +151,6 @@ angular
 
       }
     }
-
 
     // _______________________Animal form____________________________
 
@@ -214,10 +212,6 @@ angular
       }
     }
     
-
-
-
-
 $scope.SignInForm = function () {
   $scope.createPost = false;
   $scope.createAcc = false;
