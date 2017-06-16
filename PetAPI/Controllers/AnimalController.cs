@@ -91,7 +91,7 @@ public class RootObject
             // replaces the spaces in the address with "+" signs in preparation for injecting into URL 
               string splitLocation = Location.Replace(' ','+');
             //URL injected with modified address, that returns a JSON with the coordinates
-              string newUrl = $"https://maps.googleapis.com/maps/api/geocode/json?address={splitLocation}&key=AIzaSyCPy9-rXe-uJeoCt6F4XHaDVTJBryOXT-4";
+              string newUrl = $"https://maps.googleapis.com/maps/api/geocode/json?address={splitLocation}&key={Your API Key}";
             //Next 3 lines allows the reading of the JSON
               HttpClient client = new HttpClient();
               string responseString = client.GetStringAsync(newUrl).Result;
