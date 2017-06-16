@@ -115,7 +115,7 @@ public class RootObject
 
         if( _context.Animals.Count() == 0)
         {
-          _context.Animals.Add(new Animal() {Id = 1, User = "rbeardshear", Location ="18835 Winnwood Ln. Santa Ana Ca 92705", Coordinates =Animal.GetCoordinates("18835 Winnwood Ln. Santa Ana Ca 92705"), Name = "Charlie", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/White", Size = "Med", LostOrFound = "Lost", Date = "6/1/17", Image = "../images/MiniAussie1.jpg"});
+          _context.Animals.Add(new Animal() {Id = 1, User = "rbeardshear", Location ="18835 Winnwood Ln. Santa Ana Ca 92705", Coordinates =Animal.GetCoordinates("18835 Winnwood Ln. Santa Ana Ca 92705"), Name = "Charlie", Type = "Dog", Breed = "Mini Australian Shepherd", Color = "Brown/White", Size = "Med", LostOrFound = "Lost", Date = "6/1/17", Image = "../images/CharliesPic.jpg"});
 
           _context.Animals.Add(new Animal() {Id = 2, User = "rbeardshear", Location ="1524 Maurine Place Fullerton CA 92831", Coordinates =Animal.GetCoordinates("1524 Maurine Place Fullerton CA 92831"), Name = "Chloe", Type = "Cat", Breed = "Persian", Color = "Grey/White", Size = "Sm", LostOrFound = "Found", Date = "3/2/17", Image = "../images/Persian1.jpg"});
 
