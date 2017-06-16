@@ -33,17 +33,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       
     })
 
-    .state("lost", {
-      url: "/lost",
-      templateUrl: "./views/lost.html",
-      controller: "lostController"
-    })
+    // .state("lost", {
+    //   url: "/lost",
+    //   templateUrl: "./views/lost.html",
+    //   controller: "lostController"
+    // })
 
-    .state("found", {
-      url: "/found",
-      templateUrl: "./views/found.html",
-      controller: "foundController"
-    })
+    // .state("found", {
+    //   url: "/found",
+    //   templateUrl: "./views/found.html",
+    //   controller: "foundController"
+    // })
 
     .state("success", {
       url: "/success",

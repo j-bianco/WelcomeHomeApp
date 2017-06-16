@@ -3,6 +3,7 @@
 
     <h1 class="hero animalHero">Here are our animals...</h1>
 
+   
     <div class="map">
       <ui-gmap-google-map center='map.center' zoom='map.zoom'> <ui-gmap-marker ng-repeat="m in map.markers | filter: clickText | filter: searchText" coords="m.coords" icon="m.icon" idkey="m.id"></ui-gmap-google-map>
     </div>

@@ -1,6 +1,5 @@
 angular
-  .module("petApp")
-  .controller("homeController", function ($scope) {
-
-
-  });
+.module("petApp")
+.controller("homeController", function($scope, $http){
+  
+})
