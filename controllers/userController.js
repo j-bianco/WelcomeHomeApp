@@ -160,7 +160,7 @@ angular
         _city = $scope.city
         _state = $scope.state
         _zip = $scope.zip
-
+        _image = $scope.image
         _date = $scope.date;
         $scope.Animals.forEach(function (animal) {
           animalTempId = animal.id;
@@ -175,6 +175,7 @@ angular
         animal.lostOrFound = _lostOrFound;
         animal.location = _address + " " + _city + " " + _state + " " + _zip;
         animal.date = _date;
+        animal.image = _image;
         animal.id = animalTempId + 1;
         animal.user = $scope.SignedInUser
         animalService.addAnimal(animal);
@@ -193,66 +194,10 @@ angular
         $scope.city = "";
         $scope.state = "";
         $scope.zip = "";
+        $scope.image = "";
       }
     }
-  }, this);
-console.log(SignedInUser);
-$scope.usernameSignIn = "";
-$scope.passwordSignin = "";
-  
-
-
-// _______________________Animal form____________________________
-
-$scope.animalSubmit = function () {
-  _name = $scope.name;
-  _type = $scope.type;
-  _breed = $scope.breed;
-  _color = $scope.color;
-  _size = $scope.size;
-  _lostOrFound = $scope.lostOrFound;
-
-  _address = $scope.address
-  _city = $scope.city
-  _state = $scope.state
-  _zip = $scope.zip
-
-  _date = $scope.date;
-  _image = $scope.image
-  $scope.Animals.forEach(function (animal) {
-    animalTempId = animal.id;
-  }, this);
-
-  var animal = {};
-  animal.name = _name;
-  animal.type = _type;
-  animal.breed = _breed;
-  animal.color = _color;
-  animal.size = _size;
-  animal.lostOrFound = _lostOrFound;
-  animal.location = _address + " " + _city + " " + _state + " " + _zip;
-  animal.date = _date;
-  animal.image = _image;
-  animal.id = animalTempId + 1;
-  animal.user = SignedInUser
-  animalService.addAnimal(animal);
-  animalTempId = 0;
-  animalService.getAnimals().then(function (response) {
-    $scope.Animals = response.data;
-  })
-  $scope.name = "";
-  $scope.type = "";
-  $scope.breed = "";
-  $scope.color = "";
-  $scope.size = "";
-  $scope.lostOrFound = "";
-  $scope.date = "";
-  $scope.address = "";
-  $scope.city = "";
-  $scope.state = "";
-  $scope.zip = "";
-  $scope.image = "";
-}
+    
 
 
 
