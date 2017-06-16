@@ -12,7 +12,7 @@ using System.Net.Http;
 namespace PetAPI.Controllers
 {
 
-  // Deserialization for readin Json for the Coordinates
+  // Deserialization for Geocoding JSon
   public class AddressComponent
 {
     public string long_name { get; set; }
@@ -65,8 +65,9 @@ public class RootObject
     public List<Result> results { get; set; }
     public string status { get; set; }
 }
-
+// End of deserialization for Geocoding JSon
  
+
   public class Animal
   {
     public int Id {get; set;}
@@ -82,16 +83,21 @@ public class RootObject
     public string Date {get; set;}
     public string Image {get; set;}
 
+    // Takes the address and gets the coordinates
      public static string GetCoordinates(string Location)
           {
               double lat = 0;   
-              double lng = 0;   
+              double lng = 0;  
+            // replaces the spaces in the address with "+" signs in preparation for injecting into URL 
               string splitLocation = Location.Replace(' ','+');
+            //URL injected with modified address, that returns a JSON with the coordinates
               string newUrl = $"https://maps.googleapis.com/maps/api/geocode/json?address={splitLocation}&key=AIzaSyCPy9-rXe-uJeoCt6F4XHaDVTJBryOXT-4";
+            //Next 3 lines allows the reading of the JSON
               HttpClient client = new HttpClient();
               string responseString = client.GetStringAsync(newUrl).Result;
               RootObject root = JsonConvert.DeserializeObject<RootObject>(responseString);
 
+            //Makes sure that there are results to read, then extracts the coordinates from the JSON
               if (root.results.Count > 0)
               {
                 lat = root.results[0].geometry.location.lat;
@@ -106,6 +112,7 @@ public class RootObject
   [Route("api/[controller]")]
     [EnableCors("AllowCors")]
     
+    // Seeds our animals
      public class AnimalController : Controller
     {
        private readonly AnimalContext _context;
@@ -174,6 +181,8 @@ public class RootObject
         [HttpPost]
         public void Post([FromBody]Animal value)
         {
+
+    //When a new animal is posted the GetCoordinates is run before the animal is added to the list. That way when the animal is added, it will already have the coordinates filled
           value.Coordinates = Animal.GetCoordinates(value.Location);
           _context.Add(value);
           _context.SaveChanges();

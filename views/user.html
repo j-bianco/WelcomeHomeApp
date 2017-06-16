@@ -2,7 +2,7 @@
   <div class="row moveDown">
     <h1 class="hero">Let's get started.</h1>
 
-
+<!--Create new user form-->
     <div id="createAcc" ng-show="createAcc">
       <h2>Please create an account:</h2>
       <div class="form-group userInfo">
@@ -10,7 +10,8 @@
         <div><input class="form-control" type="password" placeholder="Password" ng-model="password1"></div>
         <div><input class="form-control" type="password" placeholder="Re-enter Password" ng-model="password2"></div>
         <div class="submitButton"><button class="btn btn-block btn-primary" ng-click="UserSubmit()">Submit</button></div>
-        <p ng-show="signUpWarn" class="warn">*Please Fill Out All Fields.</p>
+    <!--Warnings if information doesn't match, is not filled out, or username is already taken-->
+        <p ng-show="signUpWarn" class="warn">*Please Fill Out All Feilds.</p>
         <p ng-show="passwordWarn" class="warn">*Passwords Do Not Match.</p>
         <p ng-show="usernameWarn" class="warn">*Username is Already Taken.</p>
         <h2>-OR-</h2>
@@ -18,6 +19,7 @@
       </div>
     </div>
 
+    <!--Sign-in form -->
     <div id="signInAcc" ng-show="signInAcc">
       <h2>Sign In:</h2>
       <div class="form-group userInfo">
@@ -28,6 +30,7 @@
           <input class="form-control" type="password" placeholder="Password" ng-model="passwordSignIn">
         </div>
         <div class="submitButton"><button class="btn btn-block btn-primary" ng-click="SignIn()">Sign In</button></div>
+    <!--Warnings if information doesn't match-->
         <p ng-show="signInWarn" class="warn">*Please Fill Out All Feilds.</p>
         <p ng-show="wrongInfoWarn" class="warn">*Username or Password is Incorrect</p>
         <h2>-OR-</h2>
@@ -35,6 +38,7 @@
       </div>
     </div>
 
+    <!--New Animal form!-->
     <div id="createPost" ng-show="createPost">
       <h2>Create new Post:</h2>
       <h3>Signed Into: {{ SignedInUser }}</h3>
@@ -57,7 +61,7 @@
         </div>
         <h2>-OR-</h2>
         <div class="submitButton"><button class="btn btn-block btn-success" ng-click="SignInForm()">Sign In</button></div>
-      </div>
-    </div>
-  </div>
-</div>
+      </div> <!-- End of div "userInfo" -->
+    </div> <!-- End of div "createPost" -->
+  </div> <!-- End of div "row moveDown" -->
+</div> <!-- End of div "container" -->
