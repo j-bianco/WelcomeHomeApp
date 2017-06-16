@@ -48,7 +48,7 @@ angular
     $scope.signUpWarn = false;
     $scope.passwordWarn = false;
     $scope.usernameWarn = false;
-
+// Hiding and Showing to start with ^
 
     userService.getUser().then(function (response) {
       $scope.Users = response.data;
@@ -56,11 +56,13 @@ angular
     animalService.getAnimals().then(function (response) {
       $scope.Animals = response.data;
     })
+    // Gets all info from the database ^
 
     // ________________________User form_____________________________
     $scope.UserSubmit = function () {
       if (($scope.username == "") || ($scope.password1 == "") || ($scope.password2 == "")) {
         $scope.signUpWarn = true;
+        // If any feild is blank show warning ^
       }
       if (($scope.username != "") && ($scope.password1 != "") && ($scope.password2 != "")) {
         $scope.signUpWarn = false;
@@ -70,6 +72,7 @@ angular
         check = "";
         if (_password1 != _password2) {
           $scope.passwordWarn = true;
+          // Check if passwords match ^
         }
         else {
           $scope.passwordWarn = false;
@@ -77,13 +80,16 @@ angular
             if (_username == user.username) {
               $scope.usernameWarn = true;
               i++;
+              // loops through all users to check if username is unique^
             }
             if (_username != user.username) {
               console.log("Username doesn't match.")
               tempId = user.id;
+              // If same username is found, addes 1 to i ^
             }
 
           }, this);
+          // if username is unique then push the user through to the database 
           if (i <= 0) {
             $scope.SignedInUser = $scope.username;
             console.log($scope.SignedInUser)
@@ -109,10 +115,10 @@ angular
           }
           
           i = 0;
+          // push through and reset ^
         }
       }
     };
-
 
     // _______________________Sign In form___________________________
     $scope.SignIn = function () {
@@ -122,6 +128,7 @@ angular
       if (($scope.usernameSignIn != "") && ($scope.passwordSignIn != "")) {
         $scope.signInWarn = false;
       }
+      // Checks if feilds are filled^
       if (true) {
         $scope.Users.forEach(function (User) {
           if (($scope.usernameSignIn == User.username) && ($scope.passwordSignIn == User.password)) {
@@ -130,10 +137,12 @@ angular
             $scope.createAcc = false;
             $scope.signInAcc = false;
             console.log("Signed In")
+            // Searches data base for matching username and password, if found then signs into that username^
           }
           else {
             $scope.wrongInfoWarn = true;
             console.log("Username or Password not Correct")
+            // else if nothing found, shows error^
           }
         }, this);
         console.log($scope.SignedInUser);
@@ -143,7 +152,6 @@ angular
       }
     }
 
-
     // _______________________Animal form____________________________
 
     $scope.animalSubmit = function () {
@@ -152,6 +160,7 @@ angular
       }
       else if (($scope.name != "") && ($scope.type != "") && ($scope.breed != "") && ($scope.color != "") && ($scope.size != "") && ($scope.lostOrFound != "") && ($scope.address != "") && ($scope.city != "") && ($scope.state != "") && ($scope.zip != "")) {
         $scope.postWarn = false;
+        // CHecks if feilds are filled, if all filled push through new animal ^
         _name = $scope.name;
         _type = $scope.type;
         _breed = $scope.breed;
@@ -166,6 +175,7 @@ angular
         _date = $scope.date;
         $scope.Animals.forEach(function (animal) {
           animalTempId = animal.id;
+          // Gets last ID in the database ^
         }, this);
 
         var animal = {};
@@ -185,6 +195,7 @@ angular
         animalService.getAnimals().then(function (response) {
           $scope.Animals = response.data;
         })
+        // Pushes through animal ^
         $scope.name = "";
         $scope.type = "";
         $scope.breed = "";
@@ -197,13 +208,10 @@ angular
         $scope.state = "";
         $scope.zip = "";
         $scope.image = "";
+        // Resets Form ^
       }
     }
     
-
-
-
-
 $scope.SignInForm = function () {
   $scope.createPost = false;
   $scope.createAcc = false;
@@ -215,6 +223,7 @@ $scope.CreateForm = function () {
   $scope.createAcc = true;
   $scope.signInAcc = false;
 }
+// Buttons to navigate to and from sign and sign up pages ^
 
   });
 
