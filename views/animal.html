@@ -3,48 +3,52 @@
 
     <h1 class="hero animalHero">Here are our animals...</h1>
 
-   
+    <!--Google Maps div: gets parameters from controllers/animalController-->
     <div class="map">
       <ui-gmap-google-map center='map.center' zoom='map.zoom'> <ui-gmap-marker ng-repeat="m in map.markers | filter: clickText | filter: searchText" coords="m.coords" icon="m.icon" idkey="m.id"></ui-gmap-google-map>
     </div>
 
-    <button class="filterBtn col-sm-4"  ng-click="clickText = 'lost'">Lost</button>
+    <!--Filter buttons: uses ng-repeat filter clickText-->
+    <button class="filterBtn col-sm-4" ng-click="clickText = 'lost'">Lost</button>
     <button class="filterBtn col-sm-4" ng-click="clickText = 'found'">Found</button>
     <button class="filterBtn col-sm-4" ng-click="clickText = ''">All</button>
+
+    <!--Search bar: uses ng-repeat filter searchText-->
     <input id="searchBar" type="text" placeholder="Search..." ng-model="searchText">
 
-      <ul class="ngRepeat" ng-repeat="animal in animals | filter: clickText | filter: searchText">
-        <div class="{{animal.lostOrFound}}AnimalCard">
-          <h2 class="animalName">{{ animal.name }}</h2>
-          <div class="animalPic"><img ng-cloak src="{{animal.image}}" alt="{{animal.name}} Pic"></div>
+    <!--animal cards-->
+    <ul class="ngRepeat" ng-repeat="animal in animals | filter: clickText | filter: searchText">
+      <div class="{{animal.lostOrFound}}AnimalCard">
+        <h2 class="animalName">{{ animal.name }}</h2>
+        <div class="animalPic"><img ng-cloak src="{{animal.image}}" alt="{{animal.name}} Pic"></div>
 
-          <div class="animalInfo">
+        <div class="animalInfo">
 
-            <div class="animalId">
-              <p>Id: {{ animal.id }}</p>
-            </div>
-            <div class="animalLostOrFound">
-              <p>Lost or Found?: {{ animal.lostOrFound }}</p>
-            </div>
-            <div class="animalBreed">
-              <p>{{ animal.breed }}</p>
-            </div>
-            <div class="animalColor">
-              <p>Color: {{ animal.color }}</p>
-            </div>
-            <div class="animalDate">
-              <p>Date Lost: {{ animal.date | date: shortDate}}</p>
-            </div>
-            <div class="animalLocation">
-              <p>Location: {{ animal.location }}</p>
-            </div>
-            <div class="animalDesc">
-              <p>Description: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sunt saepe qui at ab nostrum
-                dicta necessitatibus ducimus voluptatibus sed quidem ipsum, rerum voluptates distinctio cum fuga. Voluptates
-                modi, sequi."</p>
-            </div>
+          <div class="animalId">
+            <p>Id: {{ animal.id }}</p>
           </div>
-        </div>
-      </ul>
-    </div>
-</div>
+          <div class="animalLostOrFound">
+            <p>Lost or Found?: {{ animal.lostOrFound }}</p>
+          </div>
+          <div class="animalBreed">
+            <p>{{ animal.breed }}</p>
+          </div>
+          <div class="animalColor">
+            <p>Color: {{ animal.color }}</p>
+          </div>
+          <div class="animalDate">
+            <p>Date Lost: {{ animal.date | date: shortDate}}</p>
+          </div>
+          <div class="animalLocation">
+            <p>Location: {{ animal.location }}</p>
+          </div>
+          <div class="animalDesc">
+            <p>Description: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sunt saepe qui at ab nostrum
+              dicta necessitatibus ducimus voluptatibus sed quidem ipsum, rerum voluptates distinctio cum fuga. Voluptates
+              modi, sequi."</p>
+          </div>
+        </div> <!-- end of Animal Card's info section -->
+      </div> <!-- End of Animal Card -->
+    </ul> <!-- End of AnimalCard List -->
+  </div> <!-- End of div "row moveDown" -->
+</div> <!--End of div "Container" -->
