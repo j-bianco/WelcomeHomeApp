@@ -27,7 +27,23 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       url: "/animal",
       templateUrl: "./views/animal.html",
       controller: "animalController",
+      
+        
+       // location.reload(true);
+      
     })
+
+    // .state("lost", {
+    //   url: "/lost",
+    //   templateUrl: "./views/lost.html",
+    //   controller: "lostController"
+    // })
+
+    // .state("found", {
+    //   url: "/found",
+    //   templateUrl: "./views/found.html",
+    //   controller: "foundController"
+    // })
 
     .state("success", {
       url: "/success",
