@@ -1,22 +1,23 @@
 app.controller("animalController", function ($scope, $http, animalService) {
   $scope.animals = [];
 
-  // uiGmapGoogleMapApi
-  var test = 0;
+  //forces the page to reload on change-state
   var LoadPage = function () {
     location.reload(true);
   }
+
+  //grabs the parameters for googlemaps, and sends it to the HTML
   $scope.map = animalService.getMapStuff();
 
+  //Gets the animals from our database
   animalService.getAnimals().then(function (response) {
     $scope.animals = response.data;
-    test = 1;
 
-
-
-
+    //creates markers for each animal, and color codes them based on lost or found
     for (var i = 0; i < $scope.animals.length; i++) {
       var newCoord = $scope.animals[i].coordinates.split(",");
+
+      //sets a new variable for the location of the custom marker
       var blueMarkerIcon = {
         url: 'http://localhost:8080/images/petsBlue.png'
       }
@@ -24,6 +25,7 @@ app.controller("animalController", function ($scope, $http, animalService) {
         url: 'http://localhost:8080/images/petsRed.png'
       }
       if ($scope.animals[i].lostOrFound == "Found") {
+        //Even though they aren't shown, the markers have the attributes of the animal to allow the search function to work
         var marker = {
           icon: blueMarkerIcon,
           id: $scope.animals[i].id,
@@ -57,19 +59,10 @@ app.controller("animalController", function ($scope, $http, animalService) {
             longitude: newCoord[1]
           }
         }
-      }
+      } /* end of color-coding markers */
 
+      //Adds the markers to the array of "markers", which are then added to the map
       $scope.map.markers.push(marker)
-    }
-  })
-
-  //   if (test == 0)
-  // {
-
-
-  // } else {
-  //   test = 0;
-  // }
-
-
-})
+    } /* End of Marker's for loop */
+  }); /* End of GetAnimals.Then function */
+});
