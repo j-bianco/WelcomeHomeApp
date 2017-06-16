@@ -1,6 +1,8 @@
 angular
   .module("petApp")
   .controller("userController", function ($scope, userService, animalService) {
+
+    //Declaration is Variables
     var _username;
     var _password1;
     var _password2;
