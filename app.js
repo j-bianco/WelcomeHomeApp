@@ -27,10 +27,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       url: "/animal",
       templateUrl: "./views/animal.html",
       controller: "animalController",
-      
-        
-       // location.reload(true);
-      
+      // location.reload(true);
+
     })
 
     .state("lost", {
@@ -53,10 +51,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 })
 
-.config(function(uiGmapGoogleMapApiProvider) {
+  .config(function (uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
-        key: 'AIzaSyCPy9-rXe-uJeoCt6F4XHaDVTJBryOXT-4',
-        v: '3.28', //defaults to latest 3.X anyhow
-        libraries: 'weather,geometry,visualization'
+      key: 'AIzaSyCPy9-rXe-uJeoCt6F4XHaDVTJBryOXT-4',
+      v: '3.28', //defaults to latest 3.X anyhow
+      libraries: 'weather,geometry,visualization'
     });
-})
+  })
