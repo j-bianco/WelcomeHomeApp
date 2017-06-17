@@ -56,7 +56,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 //Google maps configuration
 .config(function(uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
-        key: 'AIzaSyCPy9-rXe-uJeoCt6F4XHaDVTJBryOXT-4',
+        key: {Your API Key},
         v: '3.28',
         libraries: 'weather,geometry,visualization'
     });
